@@ -31,9 +31,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=latest
-            type=sha
+
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v6
